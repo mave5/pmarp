@@ -21,3 +21,19 @@ arr = [4, 4]
 lim = 8
 
 print get_indices_of_item_wights(arr,lim)
+
+#%%
+
+# find a pair with specific sum 
+def findPairSum(arr,s): 
+  first=0 
+  last=len(arr)-1 
+  
+  while(first<last): 
+    if (arr[first]+arr[last]>s):
+      last-=1
+    elif arr[first]+arr[last]<s:
+      first+=1 
+    else:
+      return arr[first],arr[last]
+  return []
